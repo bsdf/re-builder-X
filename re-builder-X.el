@@ -1,9 +1,12 @@
-;;; re-builder-from-xemacs-patched.el --- building Regexps with visual feedback
+;;; re-builder-X.el --- building XTREME Regexps with visual feedback
+
+;; bsdf:   This version no longer requires you to enclose your regexp in quotes.
+;;         It assumes that the entire buffer is the regular expression.
 
 ;; LeWang: This is the XEmacs version with Perl regex syntax support.  Patched
 ;;         to run on GNU Eumacs.
 
-;; Copyright (C) 1999, 2000, 2001, 2002, 2004 Free Software Foundation, Inc.
+;; Copyright (C) 1999, 2000, 2001, 2002, 2004, 2011 Free Software Foundation, Inc.
 
 ;; Author: Detlev Zundel <dzu@gnu.org>
 ;; Keywords: matching, lisp, tools
@@ -690,10 +693,8 @@ optional fourth argument FORCE is non-nil."
 	   (read (current-buffer)))
 	  ((member reb-re-syntax '(perl string))
 	   (goto-char (point-min))
-	   (re-search-forward "\"")
 	   (let ((beg (point)))
 	     (goto-char (point-max))
-	     (re-search-backward "\"")
 	     (buffer-substring-no-properties beg (point))))
 	  ((reb-lisp-syntax-p)
 	   (buffer-string)))))
@@ -710,8 +711,7 @@ optional fourth argument FORCE is non-nil."
 		(reb-empty-regexp))))
     (cond ((eq reb-re-syntax 'read)
 	   (print re (current-buffer)))
-	  ((member reb-re-syntax '(perl string))
-	   (insert "\n\"" re "\""))
+	  ((member reb-re-syntax '(perl string)))
 	  ;; For the Lisp syntax we need the "source" of the regexp
 	  ((reb-lisp-syntax-p)
 	   (insert (or (reb-target-binding reb-regexp-src)
@@ -953,6 +953,3 @@ against.
    (t (re-search-backward regexp limit noerror count))))
 
 (provide 're-builder)
-
-;;; arch-tag: 5c5515ac-4085-4524-a421-033f44f032e7
-;;; re-builder.el ends here
