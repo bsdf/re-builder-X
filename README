@@ -1,0 +1,18 @@
+RE-BUILDER                               ,;                             ,;
+                      j.               f#i                            f#i 
+            GEEEEEEELEW,            .E#t            ..       :     .E#t  
+ :KW,      L,;;L#K;;.E##j          i#W,            ,W,     .Et    i#W,   
+  ,#W:   ,KG   t#E   E###D.       L#D.            t##,    ,W#t   L#D.    
+   ;#W. jWi    t#E   E#jG#W;    :K#Wfff;         L###,   j###t :K#Wfff;  
+    i#KED.     t#E   E#t t##f   i##WLLLLt      .E#j##,  G#fE#t i##WLLLLt 
+     L#W.      t#E   E#t  :K#E:  .E#L         ;WW; ##,:K#i E#t  .E#L     
+   .GKj#K.     t#E   E#KDDDD###i   f#E:      j#E.  ##f#W,  E#t    f#E:   
+  iWf  i#K.    t#E   E#f,t#Wi,,,    ,WW;   .D#L    ###K:   E#t     ,WW;  
+ LK:    t#E    t#E   E#t  ;#W:       .D#; :K#t     ##D.    E#t      .D#; 
+ i       tDj    fE   DWi   ,KK:        tt ...      #G      ..         tt 
+                 :                                 j                     
+
+iNSTaLLaTioN:
+* place re-builder-X.el in yr emacs path (i.e. ~/.emacs.d)
+* add "(require 're-builder)" to yr .emacs
+* M-x regexp-builder
